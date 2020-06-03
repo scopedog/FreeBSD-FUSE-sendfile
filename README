@@ -1,0 +1,28 @@
+For testing FUSE + nginx (sendfile) on FreeBSD.
+
+Required libs:
+fusefs-libs (libfuse)
+libcurl
+
+Initialize: nginx uses /home/www and fusetest mounts /home/www/mnt
+# kldload fuse
+# mkdir -p /home/www/mnt
+# chown -R www:www /home/www
+# cp /usr/local/etc/nginx/nginx.conf /usr/local/etc/nginx/nginx.conf.org
+# cp nginx.conf /usr/local/etc/nginx/
+# service nginx restart
+
+Make:
+# make clean depend all
+
+Run:
+# ./fusetest
+or for debugging message
+# ./fusetest -d
+
+Access:
+Suppose you are running fusetest and ningx on server.example.com, access
+http://server.example.com/mnt/BigBuckBunny-Full-web.mp4
+with a web browser.
+Seek the video until it freezes (just don't let it play).
+If the video freezes, that's the sign of the nginx/sendfile issue.
