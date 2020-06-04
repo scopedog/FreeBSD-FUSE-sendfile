@@ -12,12 +12,13 @@
 	Definitions
 *********************************************************************/
 
-#define	MountDir	"/home/www/mnt" // Mount dir
-#define	VIDEO_FILE	"BigBuckBunny-Full-web.mp4" // Video filename
-#define	URL	"http://rnci002.ddns.net/raw-videos/BigBuckBunny-Full-web.mp4"
+#define MountDir	"/home/www/mnt" // Mount dir
+#define VIDEO_FILE	"BigBuckBunny-Full-web.mp4" // Video filename
+//#define URL	"http://rnci002.ddns.net/raw-videos/BigBuckBunny-Full-web.mp4"
+#define URL	"http://rnc02.asusa.net/raw/BigBuckBunny-Full-web.mp4"
 			// Video file URL
-#define	CACHE_FILE	"cache" // Cache filename
-#define	DUMMY_STAT_FILE	"stat" // File containing struct stat of VIDEO_FILE
+#define CACHE_FILE	"cache" // Cache filename
+#define DUMMY_STAT_FILE	"stat" // File containing struct stat of VIDEO_FILE
 
 /*********************************************************************
 	Structures
